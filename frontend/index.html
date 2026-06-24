@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perp Screener</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Perp Screener</h1>
+      <span class="sub">Скринер крипто-перпетуалов · TimescaleDB + SQL-аналитика · live по WebSocket</span>
+      <span id="status" class="status">●  подключение…</span>
+    </header>
+
+    <main>
+      <section class="panel" id="filters-panel">
+        <h2>Фильтры скрининга</h2>
+        <div id="filters"></div>
+        <button id="run-screener">Прогнать скринер</button>
+        <span id="screener-result" class="muted"></span>
+      </section>
+
+      <section class="panel">
+        <h2>Метрики <span class="muted">(клик по заголовку — сортировка)</span></h2>
+        <div class="table-wrap">
+          <table id="metrics-table">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Графики <span class="muted">(топ-6 по объёму, live последняя свеча)</span></h2>
+        <div id="charts" class="charts-grid"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
